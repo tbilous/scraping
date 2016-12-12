@@ -36,6 +36,7 @@ gem 'slim-rails'
 gem 'materialize-sass'
 gem 'material_icons'
 
+gem 'mechanize'
 
 
 group :development, :test do
