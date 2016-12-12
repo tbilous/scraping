@@ -1,0 +1,126 @@
+@import "materialize/components/color";
+
+$primary-color: color("red", "lighten-2") !default;
+
+//Customize materialize
+$h1-fontsize: 3rem !default;
+$h2-fontsize: 2.6rem !default;
+$h3-fontsize: 2.3rem !default;
+$h4-fontsize: 2rem !default;
+$h5-fontsize: 1.64rem !default;
+$h6-fontsize: 1rem !default;
+
+.row {
+  margin-bottom: 0 !important;
+}
+
+@import "materialize";
+
+// Footer sticky
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+#sidenav-overlay {
+  z-index: 1 !important;
+}
+.side-nav {
+  padding-top: 2em;
+  background: color("amber", "lighten-4");
+}
+//=======================================
+
+// Utilites
+.hidden {
+  display: none;
+}
+.display {
+  &__flex {
+    display: flex;
+    @media all and (max-width: $small-screen-up) {
+      flex-direction: column;
+    }
+  }
+  &__block {
+    display: block;
+  }
+  &__inline-block {
+    display: inline-block;
+  }
+}
+.list {
+  &-inline {
+    display: flex;
+    @extend .display__flex;
+    justify-content: space-around;
+    li {
+      margin: 0 auto 1em;
+    }
+  }
+
+  &-line {
+    li {
+      display: inline-block;
+      &:nth-last-child(1) {
+        padding: 0 1rem;
+      }
+    }
+  }
+}
+
+// Global elements
+.danger-block {
+  position: relative;
+
+  .close {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+  }
+}
+
+.translation_missing {
+  font-weight: bold;
+  color: red;
+}
+
+// Customize
+.debug-block {
+  padding: .5rem;
+  background: color("light-blue", "lighten-4");
+  pre {
+    font-size: .8rem;
+  }
+}
+
+.form-footer {
+  margin-top: 1em;
+  padding-top: 1em;
+}
+
+.page-header {
+  margin-bottom: 2em;
+}
+
+.registration {
+  &-block {
+    margin-bottom: 3em;
+  }
+}
+.fixed-action-btn.my-action-btn {
+  position: absolute !important;
+  bottom: auto;
+  top: 10px;
+  z-index: 1;
+}
+.vote-control {
+  li {
+    margin: 10px auto;
+  }
+}

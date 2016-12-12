@@ -1,0 +1,30 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#logo {
+  top: 3px;
+  right: 5px;
+  img {
+    height: 45px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  #logo {
+    display: block;
+    height: 50px;
+    position: absolute;
+  }
+}
+@media only screen and (max-width: 601px) {
+  #logo {
+    top: 5px;
+  }
+}
+@media only screen and (min-width: 601px) {
+  #logo {
+    display: inline-block;
+      img {
+        height: 59px;
+      }
+  }
+}
