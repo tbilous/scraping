@@ -1,0 +1,31 @@
+.search-grid.card
+  .row
+    .col.s3
+      img.responsive-img(src="#{@img}" )
+    .col.s6
+      h4.center
+        a(href="#{@link}")
+          = @title
+      ul.list-unstyled
+        li.center = @district
+        li.center
+          - if @stars
+            = @stars
+          - else
+            span Зірок немає
+        li.center
+          - if @reinforcement
+            = @reinforcement
+          -else
+            span Умови звичайні
+    .col.s1
+      ul.list-unstyled
+        li Оцінка:
+        li = @avg_score
+    .col.s2
+      - if @price
+        ul.list-unstyled
+          li.center Ночей #{@days}
+          li.center Сумма #{@price}
+      - else
+        p.center Номерів немає

@@ -35,8 +35,11 @@ gem 'slim'
 gem 'slim-rails'
 gem 'materialize-sass'
 gem 'material_icons'
-
+# get data
 gem 'mechanize'
+
+# js
+gem 'skim'
 
 
 group :development, :test do

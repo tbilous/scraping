@@ -14,7 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require materialize-sprockets
-//= require_tree .
+//= require skim
+//= require_tree ./shared
+//= require_tree ./templates
+//= require scraps
+
+
 
 $(document).on('turbolinks:load', function () {
     $(".dropdown-button").dropdown();

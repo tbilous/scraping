@@ -56,7 +56,7 @@ module BookingSearch
     while page.present? do
       results << parse_results(page.root.css('.sr_item'))
 
-      next_page = page.link_with(text: 'Next page')
+      next_page = page.link_with(text: 'Наступна сторінка')
 
       # make sure our access pattern has enough jitter
       sleep(0.3 + rand(2) + rand) if next_page.present?
@@ -75,7 +75,7 @@ module BookingSearch
                 clear_price(entry.css('.roomPrice').css('.price').text.strip),
                 clear_text(entry.css('.roomPrice').css('.sr_room_reinforcement').text.strip.gsub("\n", ' ').squeeze('
 ')),
-                'http://www.booking.com' + entry.css('.hotel_name_link').attr('href').value.to_s,
+                'http://www.booking.com' + entry.css('.hotel_name_link').attr('href').to_s,
                 mb_float(entry.css('.sr_review_score').css('.average').text),
                 @timeline
     end

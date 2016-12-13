@@ -1,5 +1,25 @@
 .container
-  h1 Search on booking
+  br
+  h3 Booking
+  hr
+  br
+  br
+  br
 
-  = form_for  @booking do |f|
-    = f.text_field :city
+  .form-container
+    = form_tag(scraps_path, method: 'post', id: 'searchBooking', data: { type: :json, remote: true } ) do
+      .input-field
+        = text_field_tag  :city
+        = label :city, 'Місто'
+      .input-field
+        = text_field_tag  :checkin
+        = label :checkin, 'З якого: дд.мм.рррр'
+      .input-field
+        = text_field_tag  :checkout
+        = label :checkout, 'По яке: дд.мм.рррр'
+      button.btn
+        span Шукати
+
+  #searchData
+
+  =render 'shared/search_btn', target: '#searchBooking', id: 'searchBtn'
