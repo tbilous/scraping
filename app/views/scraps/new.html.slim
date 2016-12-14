@@ -10,14 +10,14 @@
     = form_tag(scraps_path, method: 'post', id: 'searchBooking', data: { type: :json, remote: true } ) do
       .input-field
         = text_field_tag  :city
-        = label :city, 'Місто'
+        = label_tag :city, 'Місто'
       .input-field
         = text_field_tag  :checkin
-        = label :checkin, 'З якого: дд.мм.рррр'
+        = label_tag :checkin, 'З якого: дд.мм.рррр'
       .input-field
         = text_field_tag  :checkout
-        = label :checkout, 'По яке: дд.мм.рррр'
-      button.btn
+        = label_tag :checkout, 'По яке: дд.мм.рррр'
+      button#searchSubmit.btn
         span Шукати
 
   #searchData
